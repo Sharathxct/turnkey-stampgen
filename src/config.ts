@@ -110,35 +110,6 @@ async function signMessage(key: CryptoKey, content: string): Promise<string> {
   return uint8ArrayToHexString(signatureDer);
 }
 
-// Convert ArrayBuffer to Hex string (used for signature)
-// function arrayBufferToHex(buffer: ArrayBuffer): string {
-//   const byteArray = new Uint8Array(buffer);
-//   return Array.from(byteArray).map(byte => byte.toString(16).padStart(2, '0')).join('');
-// }
-
-// // Convert ArrayBuffer to Base64 URL (used for encoding)
-// function arrayBufferToBase64Url(buffer: ArrayBuffer): string {
-//   const base64 = btoa(String.fromCharCode.apply(null, new Uint8Array(buffer)));
-//   return base64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-// }
-
-// Base64 URL encoding for strings (to encode the stamp)
-// export function stringToBase64urlString(input: string): string {
-//   // string to base64 -- we do not rely on the browser's btoa since it's not present in React Native environments
-//   const base64String = btoa(input);
-//   return base64StringToBase64UrlEncodedString(base64String);
-// }
-
-// Convert hex string to ArrayBuffer (used for private key)
-// function hexToArrayBuffer(hex: string): ArrayBuffer {
-//   const buffer = new ArrayBuffer(hex.length / 2);
-//   const view = new Uint8Array(buffer);
-//   for (let i = 0; i < hex.length; i += 2) {
-//     view[i / 2] = parseInt(hex.substr(i, 2), 16);
-//   }
-//   return buffer;
-// }
-
 // sdk reference
 function fieldSizeInBytes(): number {
   return 32;
