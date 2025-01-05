@@ -351,10 +351,3 @@ function convertTurnkeyApiKeyToJwk(input: {
 
   return jwk;
 }
-
-// Example usage
-const jsonBody = JSON.stringify({ example: "data" });
-const publicKey = "yourCompressedPublicKeyHere"; // 64 bytes hex string
-const privateKey = "yourUncompressedPrivateKeyHere"; // 64 bytes hex string
-
-generateApiKeyStamp(jsonBody, publicKey, privateKey);
