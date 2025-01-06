@@ -31,6 +31,10 @@ function App() {
       <br />
       <button onClick={() => handleGenerateStamp()}>Generate Stamp</button>
       {stamp && <p>Stamp: {stamp}</p>}
+
+      <h1> random tek generator </h1>
+
+
     </>
   )
 }
